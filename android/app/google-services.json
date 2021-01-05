@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "921632404358",
+    "project_id": "infotech-6666a",
+    "storage_bucket": "infotech-6666a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921632404358:android:d4af84c735cd844c19f207",
+        "android_client_info": {
+          "package_name": "com.damarion.infotech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921632404358-kscga81suo8ektc0j0geupr3eiru3fvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChl9hHr-1OKX3N5FOYumqFm3rXefoyXYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921632404358-kscga81suo8ektc0j0geupr3eiru3fvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
