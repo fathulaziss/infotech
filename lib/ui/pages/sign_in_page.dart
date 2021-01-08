@@ -61,6 +61,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(bottom: 25),
               width: 319,
               height: 50,
               child: RaisedButton(
@@ -70,6 +71,20 @@ class _SignInPageState extends State<SignInPage> {
                     borderRadius: BorderRadius.circular(8)),
                 child: Text(
                   "Login",
+                  style: whiteTextFont.copyWith(fontSize: 17),
+                ),
+              ),
+            ),
+            Container(
+              width: 319,
+              height: 50,
+              child: RaisedButton(
+                onPressed: () {},
+                color: Colors.grey,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
+                child: Text(
+                  "Register",
                   style: whiteTextFont.copyWith(fontSize: 17),
                 ),
               ),
