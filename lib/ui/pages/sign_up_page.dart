@@ -6,6 +6,11 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController nimController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,6 +65,7 @@ class _SignUpPageState extends State<SignUpPage> {
           Container(
             width: double.infinity,
             color: Colors.white,
+            margin: EdgeInsets.symmetric(horizontal: defaultMargin),
             child: Column(
               children: [
                 Container(
@@ -76,6 +82,76 @@ class _SignUpPageState extends State<SignUpPage> {
                         image: DecorationImage(
                             image: AssetImage("assets/photo.png"),
                             fit: BoxFit.cover)),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  controller: nameController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    labelText: "Full Name",
+                    hintText: "Full Name",
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  controller: nimController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    labelText: "NIM",
+                    hintText: "20161037031101",
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  controller: emailController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    labelText: "Email Address",
+                    hintText: "Email Address",
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  controller: passwordController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    labelText: "Password",
+                    hintText: "Password",
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 25),
+                  width: 319,
+                  height: 50,
+                  child: RaisedButton(
+                    onPressed: () {},
+                    color: mainColor,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Text(
+                      "Register",
+                      style: whiteTextFont.copyWith(fontSize: 17),
+                    ),
                   ),
                 ),
               ],
