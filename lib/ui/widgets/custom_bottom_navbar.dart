@@ -8,34 +8,69 @@ class CustomBottomNavBar extends StatelessWidget {
       width: double.infinity,
       color: Colors.white,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 32,
-            height: 32,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/ic_home.png"),
-              fit: BoxFit.contain,
-            )),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.home,
+                  size: 40,
+                  color: mainColor,
+                ),
+                Text(
+                  "Home",
+                  style: GoogleFonts.poppins(
+                    color: mainColor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
+            ),
           ),
           Container(
-            width: 32,
-            height: 32,
-            margin: EdgeInsets.symmetric(horizontal: 83),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/ic_inventory.png"),
-              fit: BoxFit.contain,
-            )),
+            margin: EdgeInsets.symmetric(horizontal: 85),
+            padding: EdgeInsets.only(top: 2),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(
+                  MdiIcons.calendarBlank,
+                  size: 38,
+                  color: Color(0xFF8E8E93),
+                ),
+                Text(
+                  "Inventory",
+                  style: GoogleFonts.poppins(
+                    color: Color(0xFF8E8E93),
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                )
+              ],
+            ),
           ),
           Container(
-            width: 32,
-            height: 32,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/ic_user.png"),
-              fit: BoxFit.contain,
-            )),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.person,
+                  size: 41,
+                  color: Color(0xFF8E8E93),
+                ),
+                Text(
+                  "Student",
+                  style: GoogleFonts.poppins(
+                    color: Color(0xFF8E8E93),
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
