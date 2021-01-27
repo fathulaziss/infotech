@@ -49,13 +49,43 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.w600),
             ),
           ),
+          // List Info
           Container(
             width: double.infinity,
             height: 198,
             margin: EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10), color: Colors.amber),
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Left Stuff",
+                  style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600),
+                ),
+                Text(
+                  "View All",
+                  style: GoogleFonts.poppins(
+                      color: Color(0xFF0071ED),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          StuffCard()
         ],
       ),
     );
