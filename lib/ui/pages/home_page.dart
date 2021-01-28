@@ -30,7 +30,6 @@ class HomePage extends StatelessWidget {
                       Container(
                         width: 20,
                         height: 20,
-                        
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage("assets/menu_ic.png"),
@@ -114,6 +113,44 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              // List Event
+              EventCard(mockEvent),
+              SizedBox(
+                height: 12,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Certification",
+                      style: GoogleFonts.poppins(
+                          color: Colors.black,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      "View All",
+                      style: GoogleFonts.poppins(
+                          color: Color(0xFF0071ED),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              // List Certification
+              EventCard(mockEvent),
+              SizedBox(
+                height: 12,
               ),
             ],
           ),
