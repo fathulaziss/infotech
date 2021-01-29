@@ -8,3 +8,4 @@ import 'package:intl/intl.dart';
 part 'custom_bottom_navbar.dart';
 part 'stuff_card.dart';
 part 'event_card.dart';
+part 'certification_card.dart';

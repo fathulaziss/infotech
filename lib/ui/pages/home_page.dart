@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
                 height: 12,
               ),
               // List Certification
-              EventCard(mockEvent),
+              CertificationCard(),
               SizedBox(
                 height: 12,
               ),
