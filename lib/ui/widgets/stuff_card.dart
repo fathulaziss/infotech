@@ -11,7 +11,7 @@ class StuffCard extends StatelessWidget {
       width: 120,
       height: 170,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(6),
         color: Colors.white,
         boxShadow: [BoxShadow(blurRadius: 1, color: Colors.black26)],
       ),
