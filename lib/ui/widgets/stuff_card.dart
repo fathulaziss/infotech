@@ -48,11 +48,17 @@ class StuffCard extends StatelessWidget {
                 ),
                 Text(
                   stuff.description,
-                  style: GoogleFonts.poppins(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xFF04BC2C),
-                  ),
+                  style: (stuff.description == "Available")
+                      ? GoogleFonts.poppins(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xFF04BC2C),
+                        )
+                      : GoogleFonts.poppins(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xFF969696),
+                        ),
                 )
               ],
             ),

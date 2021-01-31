@@ -88,7 +88,26 @@ class HomePage extends StatelessWidget {
                 height: 12,
               ),
               // List Stuff
-              StuffCard(mockStuff),
+              Container(
+                width: double.infinity,
+                height: 180,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Row(
+                      children: mockStuff
+                          .map((e) => Padding(
+                                padding: EdgeInsets.only(
+                                  left: (e == mockStuff.first) ? 16 : 0,
+                                  right: 10,
+                                ),
+                                child: StuffCard(e),
+                              ))
+                          .toList(),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 12,
               ),

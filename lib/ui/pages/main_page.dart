@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
                 });
               },
               children: [
-                Text("Home"),
+                HomePage(),
                 Text("Inventory"),
                 Text("Profile"),
               ],
