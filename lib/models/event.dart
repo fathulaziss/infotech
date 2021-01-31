@@ -39,15 +39,41 @@ class Event extends Equatable {
       ];
 }
 
-Event mockEvent = Event(
-    id: 1,
-    title: "Workshop : How To Become A UX Designer",
-    picturePath:
-        "https://i1.wp.com/kliklegal.com/wp-content/uploads/2020/04/you-x-ventures-Oalh2MojUuk-unsplash.jpg",
-    description: "Available",
-    cost: 150000,
-    quota: 40,
-    dateTime: DateTime.now(),
-    time: "08.40 - 10.20",
-    location: "Lab A",
-    facilities: "");
+List<Event> mockEvent = [
+  Event(
+      id: 1,
+      title: "Workshop : How To Become A UX Designer",
+      picturePath:
+          "https://i1.wp.com/kliklegal.com/wp-content/uploads/2020/04/you-x-ventures-Oalh2MojUuk-unsplash.jpg",
+      description: "Available",
+      cost: 150000,
+      quota: 40,
+      dateTime: DateTime.now(),
+      time: "08.40 - 10.20",
+      location: "Lab A",
+      facilities: ""),
+  Event(
+      id: 2,
+      title: "Workshop : Laravel for Beginner",
+      picturePath:
+          "https://emka.web.id/wp-content/uploads/2013/09/laravel-logo-big.png",
+      description: "Available",
+      cost: 120000,
+      quota: 40,
+      dateTime: DateTime.now(),
+      time: "08.40 - 10.20",
+      location: "Lab B",
+      facilities: ""),
+  Event(
+      id: 3,
+      title: "Workshop : Basic Programming with C",
+      picturePath:
+          "https://3.bp.blogspot.com/-RIdXH7jxL2s/WnNVDImYumI/AAAAAAAAAKY/KZ9Un-sHHMQT2bITKETBUqW0gXto85PZwCPcBGAYYCw/s640/Logo%2Bbahasa%2Bpemrograman%2BC.png",
+      description: "Available",
+      cost: 80000,
+      quota: 40,
+      dateTime: DateTime.now(),
+      time: "08.40 - 10.20",
+      location: "Lab C",
+      facilities: ""),
+];

@@ -137,7 +137,26 @@ class HomePage extends StatelessWidget {
                 height: 12,
               ),
               // List Event
-              EventCard(mockEvent),
+              Container(
+                width: double.infinity,
+                height: 130,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Row(
+                      children: mockEvent
+                          .map((e) => Padding(
+                                padding: EdgeInsets.only(
+                                  left: (e == mockEvent.first) ? 16 : 0,
+                                  right: 12,
+                                ),
+                                child: EventCard(e),
+                              ))
+                          .toList(),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 12,
               ),
@@ -169,7 +188,7 @@ class HomePage extends StatelessWidget {
               // List Certification
               CertificationCard(mockCertification),
               SizedBox(
-                height: 12,
+                height: 75,
               ),
             ],
           ),
