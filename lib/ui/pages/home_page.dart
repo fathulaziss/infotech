@@ -186,7 +186,25 @@ class HomePage extends StatelessWidget {
                 height: 12,
               ),
               // List Certification
-              CertificationCard(mockCertification),
+              Container(
+                width: double.infinity,
+                height: 125,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Row(
+                      children: mockCertification
+                          .map((e) => Padding(
+                              padding: EdgeInsets.only(
+                                left: (e == mockCertification.first) ? 16 : 0,
+                                right: 12,
+                              ),
+                              child: CertificationCard(e)))
+                          .toList(),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 75,
               ),
