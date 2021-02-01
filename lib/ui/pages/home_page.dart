@@ -53,11 +53,27 @@ class HomePage extends StatelessWidget {
               // List Info
               Container(
                 width: double.infinity,
-                height: 198,
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                height: 216,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.amber),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: mockInfo
+                          .map((e) => Padding(
+                                padding: EdgeInsets.only(
+                                  left: (e == mockInfo.first) ? 16 : 0,
+                                  right: 16,
+                                ),
+                                child: InfoCard(e),
+                              ))
+                          .toList(),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20,
