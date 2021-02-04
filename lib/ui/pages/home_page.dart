@@ -90,12 +90,17 @@ class HomePage extends StatelessWidget {
                           fontSize: 17,
                           fontWeight: FontWeight.w600),
                     ),
-                    Text(
-                      "View All",
-                      style: GoogleFonts.poppins(
-                          color: Color(0xFF0071ED),
-                          fontSize: 15,
-                          fontWeight: FontWeight.w400),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(StuffPage());
+                      },
+                      child: Text(
+                        "View All",
+                        style: GoogleFonts.poppins(
+                            color: Color(0xFF0071ED),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400),
+                      ),
                     ),
                   ],
                 ),
