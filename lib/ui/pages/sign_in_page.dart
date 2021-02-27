@@ -72,6 +72,7 @@ class _SignInPageState extends State<SignInPage> {
                     Navigator.push(
                         context, MaterialPageRoute(builder: (_) => MainPage()));
                   },
+                  animationDuration: Duration(seconds: 2),
                   color: mainColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),

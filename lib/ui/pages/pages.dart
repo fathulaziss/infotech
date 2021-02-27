@@ -13,3 +13,4 @@ part 'main_page.dart';
 part 'home_page.dart';
 part 'stuff_page.dart';
 part 'inventory_page.dart';
+part 'profile_page.dart';
