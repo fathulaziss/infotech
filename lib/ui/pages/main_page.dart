@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
               },
               children: [
                 HomePage(),
-                Text("Inventory"),
+                InventoryPage(),
                 Text("Profile"),
               ],
             ),
