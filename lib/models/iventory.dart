@@ -1,3 +1,5 @@
+part of 'models.dart';
+
 class Inventory {
   final int id;
   final String inventoryName;

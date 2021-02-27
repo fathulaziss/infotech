@@ -16,9 +16,10 @@ class HomePage extends StatelessWidget {
                   height: 44,
                   width: double.infinity,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 170, right: 135),
+                        margin: EdgeInsets.only(left: 170),
                         child: Text(
                           "Home",
                           style: GoogleFonts.poppins(
@@ -30,6 +31,7 @@ class HomePage extends StatelessWidget {
                       Container(
                         width: 20,
                         height: 20,
+                        margin: EdgeInsets.only(right: 24),
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage("assets/menu_ic.png"),
@@ -92,7 +94,11 @@ class HomePage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => StuffPage(),));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => StuffPage(),
+                            ));
                       },
                       child: Text(
                         "View All",
