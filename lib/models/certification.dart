@@ -1,6 +1,6 @@
 part of 'models.dart';
 
-class Certification extends Equatable {
+class Certification{
   final int id;
   final String title;
   final String detailTitle;
@@ -23,20 +23,6 @@ class Certification extends Equatable {
       this.formatExam,
       this.duration,
       this.passingScore});
-
-  @override
-  List<Object> get props => [
-        id,
-        title,
-        detailTitle,
-        picturePath,
-        examTitle,
-        examCode,
-        cost,
-        formatExam,
-        duration,
-        passingScore
-      ];
 }
 
 List<Certification> mockCertification = [

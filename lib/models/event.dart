@@ -1,6 +1,6 @@
 part of 'models.dart';
 
-class Event extends Equatable {
+class Event {
   final int id;
   final String title;
   final int quota;
@@ -23,20 +23,6 @@ class Event extends Equatable {
       this.cost,
       this.description,
       this.picturePath});
-
-  @override
-  List<Object> get props => [
-        id,
-        title,
-        quota,
-        dateTime,
-        time,
-        location,
-        facilities,
-        cost,
-        description,
-        picturePath
-      ];
 }
 
 List<Event> mockEvent = [

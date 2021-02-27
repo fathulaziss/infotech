@@ -1,13 +1,10 @@
 part of 'models.dart';
 
-class Info extends Equatable {
+class Info {
   final int id;
   final String picturePath;
 
   Info({this.id, this.picturePath});
-
-  @override
-  List<Object> get props => [id, picturePath];
 }
 
 List<Info> mockInfo = [

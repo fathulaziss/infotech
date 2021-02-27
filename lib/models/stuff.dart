@@ -1,6 +1,6 @@
 part of 'models.dart';
 
-class Stuff extends Equatable {
+class Stuff{
   final int id;
   final String name;
   final String picturePath;
@@ -15,10 +15,6 @@ class Stuff extends Equatable {
       this.description,
       this.dateTime,
       this.location});
-
-  @override
-  List<Object> get props =>
-      [id, name, picturePath, description, dateTime, location];
 }
 
 List<Stuff> mockStuff = [
