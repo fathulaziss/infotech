@@ -92,7 +92,7 @@ class HomePage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(StuffPage());
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => StuffPage(),));
                       },
                       child: Text(
                         "View All",

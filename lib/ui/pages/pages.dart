@@ -4,7 +4,6 @@ import 'package:infotech/models/info.dart';
 import 'package:infotech/models/models.dart';
 import 'package:infotech/shared/shared.dart';
 import 'package:infotech/ui/widgets/widgets.dart';
-import 'package:get/get.dart';
 
 part 'splash_page.dart';
 part 'sign_in_page.dart';

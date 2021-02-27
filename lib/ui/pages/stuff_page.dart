@@ -16,7 +16,7 @@ class StuffPage extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.off(HomePage());
+                      Navigator.pop(context);
                     },
                     child: Container(
                       margin: EdgeInsets.fromLTRB(16, 30, 100, 0),

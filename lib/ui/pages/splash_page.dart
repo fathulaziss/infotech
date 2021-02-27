@@ -21,7 +21,10 @@ class SplashPage extends StatelessWidget {
               height: 46,
               child: RaisedButton(
                 color: mainColor,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => SignInPage()));
+                },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8)),
                 child: Text(
