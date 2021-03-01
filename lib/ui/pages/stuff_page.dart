@@ -59,64 +59,73 @@ class StuffPage extends StatelessWidget {
 
     return mockStuff
         .map(
-          (e) => Container(
-            width: width,
-            height: 220,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6),
-              color: Colors.white,
-              boxShadow: [BoxShadow(blurRadius: 1, color: Colors.black26)],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: 150,
-                  width: width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(5),
-                      topRight: Radius.circular(5),
-                    ),
-                    image: DecorationImage(
-                      image: NetworkImage(e.picturePath),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 120,
-                  margin: EdgeInsets.fromLTRB(11, 10, 5, 11),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        e.name,
-                        style: GoogleFonts.poppins(
-                            fontSize: 17,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black),
-                        maxLines: 1,
-                        overflow: TextOverflow.clip,
+          (stuff) => GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => StuffDetailPage(stuff: stuff)),
+              );
+            },
+            child: Container(
+              width: width,
+              height: 220,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                color: Colors.white,
+                boxShadow: [BoxShadow(blurRadius: 1, color: Colors.black26)],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 150,
+                    width: width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        topRight: Radius.circular(5),
                       ),
-                      Text(
-                        e.description,
-                        style: (e.description == "Available")
-                            ? GoogleFonts.poppins(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xFF04BC2C),
-                              )
-                            : GoogleFonts.poppins(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xFF969696),
-                              ),
-                      )
-                    ],
+                      image: DecorationImage(
+                        image: NetworkImage(stuff.picturePath),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
-                )
-              ],
+                  Container(
+                    width: 120,
+                    margin: EdgeInsets.fromLTRB(11, 10, 5, 11),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          stuff.name,
+                          style: GoogleFonts.poppins(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black),
+                          maxLines: 1,
+                          overflow: TextOverflow.clip,
+                        ),
+                        Text(
+                          stuff.description,
+                          style: (stuff.description == "Available")
+                              ? GoogleFonts.poppins(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF04BC2C),
+                                )
+                              : GoogleFonts.poppins(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF969696),
+                                ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         )

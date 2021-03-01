@@ -123,12 +123,22 @@ class HomePage extends StatelessWidget {
                   children: [
                     Row(
                       children: mockStuff
-                          .map((e) => Padding(
+                          .map((stuff) => Padding(
                                 padding: EdgeInsets.only(
-                                  left: (e == mockStuff.first) ? 16 : 0,
+                                  left: (stuff == mockStuff.first) ? 16 : 0,
                                   right: 10,
                                 ),
-                                child: StuffCard(e),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (_) =>
+                                              StuffDetailPage(stuff: stuff)),
+                                    );
+                                  },
+                                  child: StuffCard(stuff),
+                                ),
                               ))
                           .toList(),
                     ),
