@@ -46,6 +46,7 @@ class EventPage extends StatelessWidget {
             height: 17,
           ),
           Text('List Event'),
+          //TODO: List Event
         ],
       ),
     );
