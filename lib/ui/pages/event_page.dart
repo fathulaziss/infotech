@@ -45,7 +45,7 @@ class EventPage extends StatelessWidget {
           SizedBox(
             height: 17,
           ),
-          //TODO: next
+          Text('List Event'),
         ],
       ),
     );
