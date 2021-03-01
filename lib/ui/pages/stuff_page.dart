@@ -6,39 +6,40 @@ class StuffPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Material(
-            color: Colors.white,
-            elevation: 1,
-            child: Container(
-              width: double.infinity,
-              height: 88,
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Container(
-                      margin: EdgeInsets.fromLTRB(16, 30, 100, 0),
-                      child: Icon(
-                        Icons.arrow_back_ios,
-                        size: 20,
-                        color: Colors.black,
+          SafeArea(
+            child: Stack(
+              children: [
+                Material(
+                  color: Colors.white,
+                  elevation: 1,
+                  child: Container(
+                    width: double.infinity,
+                    height: 44,
+                    child: Center(
+                      child: Text(
+                        "All Left Stuff",
+                        style: blackTextFont.copyWith(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: 30),
-                    child: Text(
-                      "All Left Stuff",
-                      style: GoogleFonts.poppins(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(left: 16, top: 12),
+                    child: Icon(
+                      Icons.arrow_back_ios,
+                      size: 20,
+                      color: Colors.black,
                     ),
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
           ),
           Container(
