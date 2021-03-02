@@ -14,89 +14,92 @@ class _SignInPageState extends State<SignInPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Center(
-                child: Container(
-                  margin: EdgeInsets.only(top: 153, bottom: 55),
-                  width: 100,
-                  height: 44,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/logo.png"))),
-                ),
-              ),
-              TextField(
-                controller: emailController,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(6),
+        child: Hero(
+          tag: 'logo',
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 153, bottom: 55),
+                    width: 100,
+                    height: 44,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/logo.png"))),
                   ),
-                  labelText: "Username",
-                  hintText: "Username",
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                obscureText: true,
-                controller: passwordController,
-                decoration: InputDecoration(
+                TextField(
+                  controller: emailController,
+                  decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(6)),
-                    labelText: "Password",
-                    hintText: "Password"),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  margin: EdgeInsets.only(top: 8, bottom: 40),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    "Forgot Password?",
-                    style:
-                        blueTextFont.copyWith(fontSize: 14, color: mainColor),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    labelText: "Username",
+                    hintText: "Username",
                   ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 25),
-                width: 319,
-                height: 50,
-                child: RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => MainPage()));
-                  },
-                  animationDuration: Duration(seconds: 2),
-                  color: mainColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Text(
-                    "Login",
-                    style: whiteTextFont.copyWith(fontSize: 17),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  obscureText: true,
+                  controller: passwordController,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(6)),
+                      labelText: "Password",
+                      hintText: "Password"),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    margin: EdgeInsets.only(top: 8, bottom: 40),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "Forgot Password?",
+                      style:
+                          blueTextFont.copyWith(fontSize: 14, color: mainColor),
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                width: 319,
-                height: 50,
-                child: RaisedButton(
-                  onPressed: () {},
-                  color: Colors.grey,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Text(
-                    "Register",
-                    style: whiteTextFont.copyWith(fontSize: 17),
+                Container(
+                  margin: EdgeInsets.only(bottom: 25),
+                  width: 319,
+                  height: 50,
+                  child: RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => MainPage()));
+                    },
+                    animationDuration: Duration(seconds: 2),
+                    color: mainColor,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Text(
+                      "Login",
+                      style: whiteTextFont.copyWith(fontSize: 17),
+                    ),
                   ),
                 ),
-              )
-            ],
+                Container(
+                  width: 319,
+                  height: 50,
+                  child: RaisedButton(
+                    onPressed: () {},
+                    color: Colors.grey,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Text(
+                      "Register",
+                      style: whiteTextFont.copyWith(fontSize: 17),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

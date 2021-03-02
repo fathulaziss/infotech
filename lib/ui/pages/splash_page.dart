@@ -1,6 +1,30 @@
 part of 'pages.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
+  @override
+  _SplashPageState createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  final splashDelay = 2;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _loadWidget();
+  }
+
+  _loadWidget() async {
+    var _duration = Duration(seconds: splashDelay);
+    return Timer(_duration, navigationPage);
+  }
+
+  void navigationPage() {
+    Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: (BuildContext context) => SignInPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,30 +33,16 @@ class SplashPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 61,
-              width: 140,
-              decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/logo.png'))),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 100),
-              width: 250,
-              height: 46,
-              child: RaisedButton(
-                color: mainColor,
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => SignInPage()));
-                },
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8)),
-                child: Text(
-                  "Get Started",
-                  style: whiteTextFont.copyWith(fontSize: 17),
-                ),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                height: 61,
+                width: 140,
+                decoration: BoxDecoration(
+                    image:
+                        DecorationImage(image: AssetImage('assets/logo.png'))),
               ),
-            )
+            ),
           ],
         ),
       ),
