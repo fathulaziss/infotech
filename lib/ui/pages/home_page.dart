@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(left: 170),
                         child: Text(
-                          "Hubla Main",
+                          "Hubla Main Update User1",
                           style: GoogleFonts.poppins(
                               fontSize: 17,
                               fontWeight: FontWeight.w600,
