@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 13, left: 16, bottom: 17),
                 child: Text(
-                  "Info",
+                  "Info Update User2",
                   style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontSize: 17,
