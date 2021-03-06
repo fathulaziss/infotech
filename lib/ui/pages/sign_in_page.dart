@@ -69,15 +69,17 @@ class _SignInPageState extends State<SignInPage> {
                   margin: EdgeInsets.only(bottom: 25),
                   width: 319,
                   height: 50,
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (_) => MainPage()));
                     },
-                    animationDuration: Duration(seconds: 2),
-                    color: mainColor,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
+                    style: ElevatedButton.styleFrom(
+                      animationDuration: Duration(seconds: 2),
+                      primary: mainColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                    ),
                     child: Text(
                       "Login",
                       style: whiteTextFont.copyWith(fontSize: 17),
@@ -87,11 +89,13 @@ class _SignInPageState extends State<SignInPage> {
                 Container(
                   width: 319,
                   height: 50,
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     onPressed: () {},
-                    color: Colors.grey,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.grey,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                    ),
                     child: Text(
                       "Register",
                       style: whiteTextFont.copyWith(fontSize: 17),

@@ -143,11 +143,13 @@ class _SignUpPageState extends State<SignUpPage> {
                   margin: EdgeInsets.only(bottom: 25),
                   width: 319,
                   height: 50,
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     onPressed: () {},
-                    color: mainColor,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
+                    style: ElevatedButton.styleFrom(
+                      primary: mainColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                    ),
                     child: Text(
                       "Register",
                       style: whiteTextFont.copyWith(fontSize: 17),
