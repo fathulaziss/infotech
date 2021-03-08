@@ -18,14 +18,16 @@ class HomePage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        margin: EdgeInsets.only(left: 170),
-                        child: Text(
-                          "Hubla Main Update User1",
-                          style: GoogleFonts.poppins(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(left: 170),
+                          child: Text(
+                            "Home",
+                            style: GoogleFonts.poppins(
+                                fontSize: 17,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black),
+                          ),
                         ),
                       ),
                       Container(

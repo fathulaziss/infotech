@@ -4,51 +4,55 @@ class StuffPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children: [
-          SafeArea(
-            child: Stack(
-              children: [
-                Material(
-                  color: Colors.white,
-                  elevation: 1,
-                  child: Container(
-                    width: double.infinity,
-                    height: 44,
-                    child: Center(
-                      child: Text(
-                        "All Left Stuff",
-                        style: blackTextFont.copyWith(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
+          Column(
+            children: [
+              SafeArea(
+                child: Stack(
+                  children: [
+                    Material(
+                      color: Colors.white,
+                      elevation: 1,
+                      child: Container(
+                        width: double.infinity,
+                        height: 44,
+                        child: Center(
+                          child: Text(
+                            "All Left Stuff",
+                            style: blackTextFont.copyWith(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(left: 16, top: 12),
-                    child: Icon(
-                      Icons.arrow_back_ios,
-                      size: 20,
-                      color: Colors.black,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        margin: EdgeInsets.only(left: 16, top: 12),
+                        child: Icon(
+                          Icons.arrow_back_ios,
+                          size: 20,
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.fromLTRB(17, 17, 17, 0),
-            child: Wrap(
-              spacing: 24,
-              runSpacing: 24,
-              children: generateStuffWidgets(context),
-            ),
+              ),
+              Container(
+                margin: EdgeInsets.fromLTRB(17, 17, 17, 0),
+                child: Wrap(
+                  spacing: 24,
+                  runSpacing: 24,
+                  children: generateStuffWidgets(context),
+                ),
+              ),
+            ],
           ),
         ],
       ),
@@ -56,8 +60,6 @@ class StuffPage extends StatelessWidget {
   }
 
   List<Widget> generateStuffWidgets(BuildContext context) {
-    double width = (MediaQuery.of(context).size.width - 2 * 24 - 24) / 2;
-
     return mockStuff
         .map(
           (stuff) => GestureDetector(
@@ -69,7 +71,7 @@ class StuffPage extends StatelessWidget {
               );
             },
             child: Container(
-              width: width,
+              width: 167,
               height: 220,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
@@ -81,7 +83,7 @@ class StuffPage extends StatelessWidget {
                 children: [
                   Container(
                     height: 150,
-                    width: width,
+                    width: 167,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(5),

@@ -54,4 +54,31 @@ List<Stuff> mockStuff = [
     location: "Lab D",
     dateTime: "06 September 2020",
   ),
+  Stuff(
+    id: 5,
+    name: "AirPods",
+    picturePath:
+        "https://images.unsplash.com/photo-1505236273191-1dce886b01e9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    description: "Available",
+    location: "Lab D",
+    dateTime: "06 September 2020",
+  ),
+  Stuff(
+    id: 6,
+    name: "AirPods",
+    picturePath:
+        "https://images.unsplash.com/photo-1505236273191-1dce886b01e9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    description: "Available",
+    location: "Lab D",
+    dateTime: "06 September 2020",
+  ),
+  Stuff(
+    id: 7,
+    name: "AirPods",
+    picturePath:
+        "https://images.unsplash.com/photo-1505236273191-1dce886b01e9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    description: "Available",
+    location: "Lab D",
+    dateTime: "06 September 2020",
+  ),
 ];
